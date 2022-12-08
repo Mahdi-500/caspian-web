@@ -1,0 +1,82 @@
+---
+const header_js_path = "../../scripts/base/header.js";
+
+const title = "Caspian Web";
+const { alt_title ,alt_url} = Astro.props;
+---
+<header>
+    <nav class="a-flx-sm a-vbx-rsp">
+        <div class="logo">
+            <h1><a href="/" class="title">{title}</a> <a href={alt_url} class="alt_title">{alt_title}</a></h1>
+        </div>
+
+        <div class="links">
+            <a href="/blog">Blog</a>
+            <a href="/docs">Docs</a>
+            <a href="/donate">Donate</a>
+            <a href="/about">About</a>
+            <a href="https://github.com/caspian-web/caspian-web" >Github</a>
+        </div>
+    </nav>
+</header>
+
+<style lang="scss">
+    header{
+        background-color: #393E41;
+    }
+
+    .logo a{
+        text-decoration: none;
+        &.title{
+            color: #F6F7EB;
+            &:hover{
+                transform: translateY(2px );
+            }
+        }
+        &.alt_title{
+            color: #44BBA4;
+        }
+    }
+    .links{
+        a{
+            color: #F6F7EB;
+        }
+    }
+    nav{
+        padding: 1rem 0;
+    }
+    @media screen and (max-width: 480px) {
+        nav{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 2rem;
+            .logo{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+            }
+            .links{
+                width: 100vw; 
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    @media screen and (min-width: 480px) {
+        nav{justify-content: space-between;}
+        .logo,.links{
+            display: flex;
+            align-items: center;
+        }
+        .links a{
+            padding-left: 8px;
+        }
+    }
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+        nav{
+            padding: 1rem;
+        }
+    }
+
+</style>

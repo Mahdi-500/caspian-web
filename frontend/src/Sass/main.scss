@@ -1,0 +1,25 @@
+@use './albors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+body{font-family: 'Tajawal', sans-serif;}
+body-1{font-family: 'Marhey', cursive;}
+body-2{font-family: 'Tajawal', sans-serif;}
+
+$fst: #6C464E;
+$snd: #F1FFE7;
+$thrd: #231F20;
+
+.bg-1{background-color: $fst;}
+.bg-2{background-color: $snd;}
+.bg-3{background-color: $thrd;}
+
+.clr-1{color: $fst;}
+.clr-2{color: $snd;}
+.clr-3{color: $thrd;}
+
+.brd-1{border-bottom:2px dashed $fst;}
+.brd-2{border-bottom:2px dashed $snd;}
+.brd-3{border-bottom:2px dashed $thrd;}
+
+//https://coolors.co/f6f7eb-e94f37-393e41-3f88c5-44bba4
