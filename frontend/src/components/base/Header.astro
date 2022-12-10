@@ -22,19 +22,21 @@ const { alt_title ,alt_url} = Astro.props;
 
 <style lang="scss">
     header{
-        background-color: #393E41;
+        background-color: #393E41; 
     }
 
     .logo a{
         text-decoration: none;
         &.title{
             color: #F6F7EB;
-            &:hover{
-                transform: translateY(2px );
-            }
+
         }
         &.alt_title{
             color: #44BBA4;
+
+        }
+        &.title:hover,&.alt_title:hover{
+            text-decoration: underline;
         }
     }
     .links{
@@ -60,6 +62,7 @@ const { alt_title ,alt_url} = Astro.props;
                 width: 100vw; 
                 display: flex;
                 justify-content: space-evenly;
+                @media screen and (max-width: 480px) {padding-top: 1rem;}
             }
         }
     }
@@ -78,5 +81,4 @@ const { alt_title ,alt_url} = Astro.props;
             padding: 1rem;
         }
     }
-
 </style>
