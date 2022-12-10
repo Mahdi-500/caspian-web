@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+
+import Header from '../components/base/Header.astro';
+
+import '../Sass/side/docs.scss'
+
+const programmingLetterC = await Astro.glob('./content/docs/Programming/**/*.md');
+---
+
+<Layout title="Welcome to Astro.">
+	<Header alt_title="Docs" alt_url="/docs"/>
+	<main class="a-flx">
+		<div class="sidebar">
+			<div class="SideBarList">
+				{programmingLetterC.map((post) =>
+				
+					<a href={post.url}><p>{post.frontmatter.title}</p></a>
+				)}
+			</div>
+		</div>
+		<div class="main">
+			
+		</div>
+	</main>
+</Layout>
+
+<style lang="scss">
+
+</style>
