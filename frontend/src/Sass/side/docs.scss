@@ -1,0 +1,48 @@
+main{
+    width: 100vw;
+    flex-wrap: wrap;
+}
+.main{
+    min-height: 100vh;
+    
+    width: 100vw;
+    @media (min-width: 768px) {width: 80%;}
+    padding: 1rem;
+    p{
+        color: #393E41;
+        padding: 0.4rem 1rem;
+    }
+    li{
+        list-style-type: none;
+    }
+    a{
+        color: #44BBA4;
+    }
+}.sidebar{
+    background-color: #44BBA4;
+    color: #393E41;
+    font-size: large;
+    font-weight: bold;
+
+    width: 100vw;
+    padding: 1rem;
+    @media (min-width: 768px) {width: 20vw;min-height: 100vh;border-right: 3px solid #393e4118;padding-left: 1rem;}
+    @media (min-width: 1280px){width: 15rem;}
+}
+.SideBarList{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    @media (min-width: 768px){
+        flex-direction: column;
+    }
+    p{
+        padding: 0.3rem;
+    }
+    a:nth-of-type(odd){
+        color: #393E41;
+    }
+    a:nth-of-type(even){
+        color: #F6F7EB;
+    }
+}
