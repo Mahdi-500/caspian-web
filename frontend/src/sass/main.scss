@@ -1,0 +1,47 @@
+@use './albors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+body{font-family: 'Tajawal', sans-serif;}
+body-1{font-family: 'Marhey', cursive;}
+body-2{font-family: 'Tajawal', sans-serif;}
+
+$fst: #6C464E;
+$snd: #F1FFE7;
+$thrd: #231F20;
+
+$cl1: #F6F7EB ;
+$cl2: #393E41 ;
+$cl3: #44BBA4 ;
+$cl4: #E94F37 ;
+
+
+.bg-1{background-color: $cl1;}
+.bg-2{background-color: $cl2;}
+.bg-3{background-color: $cl3;}
+.bg-4{background-color: $cl4;}
+
+.clr-1{color: $cl1;}
+.clr-2{color: $cl2;}
+.clr-3{color: $cl3;}
+.clr-4{color: $cl4;}
+
+.brd-1{border-bottom:2px dashed $cl1;}
+.brd-2{border-bottom:2px dashed $cl2;}
+.brd-3{border-bottom:2px dashed $cl3;}
+.brd-4{border-bottom:2px dashed $cl4;}
+
+//https://coolors.co/f6f7eb-e94f37-393e41-3f88c5-44bba4
+
+.c-vbx{
+    margin: auto;
+    @media (min-width: 768px) {width: 768px;}
+}
+
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
