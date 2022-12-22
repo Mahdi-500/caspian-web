@@ -8,11 +8,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "sass-build": "sass ../src/:../dist/"
+    "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.6.14",
-    "sass": "^1.56.1"
+    "astro": "^1.7.2",
+    "sass": "^1.57.1"
   }
 }
