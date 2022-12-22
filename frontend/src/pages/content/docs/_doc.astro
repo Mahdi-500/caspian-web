@@ -1,0 +1,52 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+
+const {frontmatter} = Astro.props;
+---
+
+<Layout title="Documents">
+	<Header alt_title="Docs" alt_url="/docs" />
+	<main class="a-bx-page bg-1 _doc">
+		<div class="slot a-vbx-rsp">
+            <slot/>
+        </div>
+	</main>
+</Layout>
+
+<style lang="scss" is:global>
+	$cl1: #F6F7EB ;
+    $cl2: #393E41 ;
+    $cl3: #44BBA4 ;
+    $cl4: #E94F37 ;
+	main._doc{
+		min-height: 100vh;
+		padding-top: 1rem;
+	}
+	._doc{
+		padding: 1rem;
+        @media (min-width: 768px) {padding: 0;}
+
+		h1{
+			color: $cl3;
+			padding-top: 2rem;
+			&:first-child{
+				padding-top: 0;
+			}
+		}
+		a{
+			color: $cl2;
+			margin-right: 12px;
+		}
+		.hide{
+			display: none;
+		}
+		p{
+			padding-top: 5px;
+		}
+		.doc_list{
+			display: flex;
+		}
+	}
+</style>
+
