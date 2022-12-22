@@ -1,16 +1,19 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/Layout.astro';
 
-import Header from '../components/base/Header.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<Header/>
-	<main>
-
+<Layout title="Home">
+	<Header />
+	<main class="a-bx-page bg-1">
 	</main>
+
 </Layout>
 
 <style lang="scss">
+	main,aside{
+		min-height: 100vh;
+	}
 
 </style>
