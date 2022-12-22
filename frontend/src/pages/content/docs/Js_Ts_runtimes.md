@@ -1,6 +1,6 @@
 ---
 layout: './_doc.astro'
-title: Js and Ts Runtime
+title: Js & Ts Runtime
 ---
 
 [Nodejs]()
