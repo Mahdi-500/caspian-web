@@ -1,0 +1,35 @@
+---
+const {
+  subtitle,
+  suburl
+} = Astro.props;
+---
+<header class="box-row bc2">
+  <div class="top-header vbox flex flex-row-rev">
+    <div class="logo flex flex-row-rev">
+      <a href="/" class="tc3"><p> کاسپین وب</p></a>
+      &nbsp; 
+      <a href={suburl} class="tc4"><p> {subtitle}</p></a>
+    </div>
+  </div>
+  <div class="bottom-header vbox flex flex-row-rev">
+    <div class="links flex flex-row-rev">
+      <a href="/content/learn" class="tc1">آموزش</a>
+      <a href="/content/blog" class="tc1">بلاگ</a>
+      <a href="/content/document" class="tc1">داکیومنت</a>
+      <a href="https://github.com/caspian-web/caspian-web" class="tc1">گیت  هاب</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header{}
+
+  .logo,.links{padding-bottom:8px;}
+  .logo a{text-decoration:none;transition:transform .3s ease-in-out;}
+  .logo a:hover{transform: translate(0px,5px);}
+
+  .links a{margin-left:12px;transition:transform .4s ease-in-out;}
+  .links a:hover{transform: translate(0px,-5px);}
+
+</style>
