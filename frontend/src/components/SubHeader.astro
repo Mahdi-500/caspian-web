@@ -1,0 +1,34 @@
+---
+
+const {
+  subtitle,
+  suburl
+} = Astro.props;
+---
+<header class="box-row bc4">
+  <div class="vbox flex flex-row-rev">
+    <div class="links flex flex-row-rev">
+      <a href="" class="tc5">Html</a>
+      <a href="" class="tc5">Css</a>
+      <a href="" class="tc5">JavaScript</a>
+      <a href="" class="tc5">Rust</a>
+      <a href="" class="tc5">Go</a>
+      <a href="" class="tc5">Zig</a>
+      <a href="" class="tc5">Python</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  header{border-bottom:#9d53ce83 2px solid;} 
+
+  .links{padding:4px 0;}
+  .links a{
+    margin-left:12px;text-decoration:none;
+    transition:border-color .25s ease-in-out,transform .25s ease-in-out;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+  }
+  .links a:hover{border-color:#9d53ce83;transform: translate(0,2px );}
+
+</style>
