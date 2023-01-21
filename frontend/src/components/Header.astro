@@ -5,31 +5,129 @@ const {
 } = Astro.props;
 ---
 <header class="box-row bc2">
-  <div class="top-header vbox flex flex-row-rev">
-    <div class="logo flex flex-row-rev">
-      <a href="/" class="tc3"><p> کاسپین وب</p></a>
-      &nbsp; 
-      <a href={suburl} class="tc4"><p> {subtitle}</p></a>
+  <div class="header vbox">
+
+    <div class="top-header">
+      <div class="logo" id="logo">
+        <a href="/" class="tc3"><p> کاسپین وب</p></a>
+        &nbsp; 
+        <a href={suburl} class="tc4"><p> {subtitle}</p></a> 
+        <p class="tc1 sm:hide">&nbsp; | &nbsp;</p>
+      </div>
+  
+      <div class="links" id="links">
+        <a href="/content/learn" class="tc1">آموزش</a>
+        <a href="/content/blog" class="tc1">بلاگ</a>
+        <a href="/content/document" class="tc1">داکیومنت</a>
+      </div>
     </div>
-  </div>
-  <div class="bottom-header vbox flex flex-row-rev">
-    <div class="links flex flex-row-rev">
-      <a href="/content/learn" class="tc1">آموزش</a>
-      <a href="/content/blog" class="tc1">بلاگ</a>
-      <a href="/content/document" class="tc1">داکیومنت</a>
-      <a href="https://github.com/caspian-web/caspian-web" class="tc1">گیت  هاب</a>
+
+    <div class="header">
+      <div class="icons" id="icons">
+        <a href="https://github.com/caspian-web/caspian-web" class="tc1 flex">
+          <img src="/Github.svg" alt="" width="24">
+        </a>
+        <img src="/Sun.svg" alt="" width="24" id="show-light" class="theme-icon">
+        <img src="/Moon.svg" alt="" width="24" id="show-dark" class="theme-icon">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div class="h1 bc1"></div>
+        <div class="h2 bc1"></div>
+        <div class="h3 bc1"></div>
+      </div>
     </div>
+    
   </div>
 </header>
 
+<script type="module">
+  // Theme Toggler
+  const showDark = document.querySelector("#show-dark");
+  const showLight = document.querySelector("#show-light");
+
+  showLight.classList.toggle("hide")
+  function toggle_theme(){
+      showLight.classList.toggle("hide")
+      showDark.classList.toggle("hide")
+  }
+  showDark.addEventListener('click', toggle_theme);
+  showLight.addEventListener('click', toggle_theme);
+
+  // Hamburger Toggler
+  const hamburger = document.querySelector("#hamburger")
+  const links = document.querySelector("#links")
+  const icons = document.querySelector("#icons")
+  const logo = document.querySelector("#logo")
+
+  function toggle_hamburger(){
+    hamburger.classList.toggle("hamburger-clicked")
+    links.classList.toggle("sm:show")
+    icons.classList.toggle("sm:show")
+    logo.classList.toggle("sm:hide")
+  }
+  hamburger.addEventListener('click', toggle_hamburger);
+
+</script>
+
 <style>
-  .header{}
+  .hide{display:none;}
+  .show{display:flex;}
 
-  .logo,.links{padding-bottom:8px;}
+  .header,.top-header{display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:center;}
+
+  .logo{
+    display:flex;flex-direction:row-reverse;
+    padding:8px 0;
+  }
   .logo a{text-decoration:none;transition:transform .3s ease-in-out;}
-  .logo a:hover{transform: translate(0px,5px);}
+  .logo a:hover{transform: translate(0px,-5px);}
 
-  .links a{margin-left:12px;transition:transform .4s ease-in-out;}
+  .links{
+    display:flex;flex-direction:row-reverse;
+    padding:8px 0;
+  }
+  .links a{margin-left:12px;transition:transform .3s ease-in-out;}
   .links a:hover{transform: translate(0px,-5px);}
+
+  .icons{display:flex;column-gap:5px;}
+  .icons a{margin-left:12px;transition:transform .3s ease-in-out;}
+  .icons a:hover{transform: translate(0px,-3px);}
+
+  @media(max-width:768px){
+    .top-header{column-gap:16px;}
+
+    .sm\:header{}
+
+    .sm\:logo{}
+    .sm\:links{}
+    .sm\:icons{}
+    
+    .hamburger{
+      display:flex;justify-content:space-evenly;
+      width:24px;transform: rotate(90deg);
+      transition: all .4s ease;
+    }
+    .hamburger div{width:2px;height:16px;border-radius:1px;}
+
+    .hamburger-clicked{display:flex;justify-content:start;transform:translate(12px);}
+    .hamburger-clicked div{}
+    .hamburger-clicked .h1{transform:rotate(45deg);}
+    .hamburger-clicked .h2{display:none;}
+    .hamburger-clicked .h3{transform:rotate(135deg);}
+    
+    .links,.icons{display:none;}
+    .sm\:hide{display:none;}
+    .sm\:show{display:flex;}
+  }
+
+  @media(min-width:768px){
+  .md\:header{}
+    
+  .md\:logo{}
+  .md\:links{}
+  .md\:icons{}
+
+  .hamburger{display:none;}
+  }
 
 </style>
