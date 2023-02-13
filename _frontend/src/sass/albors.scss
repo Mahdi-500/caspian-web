@@ -1,0 +1,103 @@
+//StyleAll
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+//Boxes
+.a-bx-row{
+    width: 100%;
+}
+.a-bx-col{
+    height: 100%;
+}
+.a-bx-page{
+    width: 100vw;
+    min-height: 100vh;
+}
+.a-vbx{
+    margin: auto;
+    @media (min-width: 768px) {
+        width: 720px;
+    }
+}
+.a-vbx-rsp{//responsive
+    margin: auto;
+    @media (min-width: 768px) {width: 640px;}
+    @media (min-width: 1024px) {width: 768px;}
+    @media (min-width: 1280px) {width: 1024px;}
+    @media (min-width: 1536px) {width: 1280px;}
+}
+//Btns
+.a-btn{
+    background: none;
+    padding: 0.2rem 1rem ;
+}
+.a-btn-link{
+    text-decoration: none;
+    padding: 0.2rem 1rem ;
+    
+}
+.a-btn-prmry{//primary
+    background: none;
+    padding: 0.2rem 1rem ;
+}
+//Flex
+    //Display Flex
+    .a-flx{display: flex;}
+    .a-flx-sm{@media (min-width: 480px) {display: flex;}}
+    .a-flx-md{@media (min-width: 768px) {display: flex;}}
+    .a-flx-lg{@media (min-width: 1024px) {display: flex;}}
+    //Flex Directions
+    .a-flx-row{flex-direction: row;}
+    .a-flx-row-rvrs{flex-direction: row-reverse;}
+
+    .a-flx-col{flex-direction: column;}
+    .a-flx-col-rvrs{flex-direction: column-reverse;}
+    //Flex ???? (TODO : THIS SECTION NEED A REWORK)
+    .a-flx-btwn{justify-content: space-between;}
+    .a-flx-evn{justify-content: space-evenly;}
+    .a-itms-cntr{align-items: center;}
+//Grid
+.a-grid{
+    display: grid;
+    & img{display: block;margin: auto;}
+    @media (min-width: 768px) {
+        & img{margin:0 0;}
+        &.\31{grid-template-columns:repeat(1, 1fr);}
+        &.\32{grid-template-columns:repeat(2, 1fr);}
+        &.\33{grid-template-columns:repeat(6, 1fr);}
+        &.\34{grid-template-columns:repeat(4, 1fr);}
+        &.\35{grid-template-columns:repeat(5, 1fr);}
+        &.\36{grid-template-columns:repeat(6, 1fr);}
+        &.\37{grid-template-columns:repeat(7, 1fr);}
+        &.\38{grid-template-columns:repeat(8, 1fr);}
+        &.\39{grid-template-columns:repeat(9, 1fr);}
+        &.\31 0{grid-template-columns:repeat(10, 1fr);}
+        &.\31 1{grid-template-columns:repeat(11, 1fr);}
+        &.\31 2{grid-template-columns:repeat(12, 1fr);}
+    }
+}
+
+//Text
+%header{
+    list-style: none;
+}
+.a-h1{
+    @extend %header;   
+}
+.a-h2{
+    @extend %header;   
+}
+.a-h3{
+    @extend %header;
+}
+.a-h4{
+    @extend %header;
+}
+.a-h5{
+    @extend %header;
+}
+.a-h6{
+    @extend %header;
+}

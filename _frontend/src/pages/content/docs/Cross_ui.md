@@ -1,4 +1,4 @@
 ---
 layout: './_doc.astro'
-title: Web Frontend
+title: CrossPlatform Ui
 ---
