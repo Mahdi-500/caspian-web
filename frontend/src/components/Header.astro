@@ -24,11 +24,11 @@ const {
 
     <div class="header">
       <div class="icons" id="icons">
+        <img src="/Sun.svg" alt="" width="24" id="show-light" class="theme-icon">
+        <img src="/Moon.svg" alt="" width="24" id="show-dark" class="theme-icon">
         <a href="https://github.com/caspian-web/caspian-web" class="tc1 flex">
           <img src="/Github.svg" alt="" width="24">
         </a>
-        <img src="/Sun.svg" alt="" width="24" id="show-light" class="theme-icon">
-        <img src="/Moon.svg" alt="" width="24" id="show-dark" class="theme-icon">
       </div>
       <div class="hamburger" id="hamburger">
         <div class="h1 bc1"></div>
@@ -73,17 +73,17 @@ const {
   .hide{display:none;}
   .show{display:flex;}
 
-  .header,.top-header{display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:center;}
+  .header,.top-header{display:flex;justify-content:space-between;align-items:center;}
 
   .logo{
-    display:flex;flex-direction:row-reverse;
+    display:flex;
     padding:8px 0;
   }
   .logo a{text-decoration:none;transition:transform .3s ease-in-out;}
   .logo a:hover{transform: translate(0px,-5px);}
 
   .links{
-    display:flex;flex-direction:row-reverse;
+    display:flex;
     padding:8px 0;
   }
   .links a{margin-left:12px;transition:transform .3s ease-in-out;}
@@ -94,7 +94,9 @@ const {
   .icons a:hover{transform: translate(0px,-3px);}
 
   @media(max-width:768px){
+    .header{padding-top:8px;padding-bottom:8px;}
     .top-header{column-gap:16px;}
+    
 
     .sm\:header{}
 
@@ -103,17 +105,17 @@ const {
     .sm\:icons{}
     
     .hamburger{
-      display:flex;justify-content:space-evenly;
-      width:24px;transform: rotate(90deg);
+      display:flex;column-gap:5px;align-items: center;justify-content: center;
+      width:32px;transform: rotate(-90deg);
       transition: all .4s ease;
     }
-    .hamburger div{width:2px;height:16px;border-radius:1px;}
+    .hamburger div{width:2px;height:24px;border-radius:1px;}
 
-    .hamburger-clicked{display:flex;justify-content:start;transform:translate(12px);}
+    .hamburger-clicked{display:flex;justify-content:start;transform:translate(-8px);}
     .hamburger-clicked div{}
-    .hamburger-clicked .h1{transform:rotate(45deg);}
+    .hamburger-clicked .h1{transform:rotate(-135deg)translate(0,-4px);}
     .hamburger-clicked .h2{display:none;}
-    .hamburger-clicked .h3{transform:rotate(135deg);}
+    .hamburger-clicked .h3{transform:rotate(-45deg)translate(0,4px);}
     
     .links,.icons{display:none;}
     .sm\:hide{display:none;}

@@ -6,29 +6,27 @@ const {
 } = Astro.props;
 ---
 <header class="box-row bc4">
-  <div class="vbox flex flex-row-rev">
-    <div class="links flex flex-row-rev">
-      <a href="" class="tc5">Html</a>
-      <a href="" class="tc5">Css</a>
-      <a href="" class="tc5">JavaScript</a>
-      <a href="" class="tc5">Rust</a>
-      <a href="" class="tc5">Go</a>
-      <a href="" class="tc5">Zig</a>
-      <a href="" class="tc5">Python</a>
+  <div class="vbox flex">
+    <div class="links flex">
+      <a href="" class="link">Html</a>
+      <a href="" class="link">Css</a>
+      <a href="" class="link">JavaScript</a>
+      <a href="" class="link">Rust</a>
+      <a href="" class="link">Go</a>
+      <a href="" class="link">Zig</a>
+      <a href="" class="link">Python</a>
     </div>
   </div>
 </header>
 
 <style>
-  header{border-bottom:#9d53ce83 2px solid;} 
+  header{border-bottom:#9d53ce83 3px solid;border-radius: 0 0 .8rem .7rem;} 
 
-  .links{padding:4px 0;}
-  .links a{
+  a.link{
+    color:#393E41;
     margin-left:12px;text-decoration:none;
-    transition:border-color .25s ease-in-out,transform .25s ease-in-out;
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
+    transition:color .2s ease-in-out;
   }
-  .links a:hover{border-color:#9d53ce83;transform: translate(0,2px );}
+  a.link:hover{color:#8952adb2;}
 
 </style>
