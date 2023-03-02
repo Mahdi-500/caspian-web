@@ -8,3 +8,18 @@ nom run astro dev
 
 # Astro
 [Astro](https://astro.build)
+
+# Todos
+> Technical
+- [ ] Logo
+- [ ] Docker
+- [ ] Nix Flake
+
+
+> Css
+- [ ] Albors Css Overhull
+- [ ] Light And Dark Theme
+
+> JavaScript
+
+> Astro
