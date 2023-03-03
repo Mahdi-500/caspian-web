@@ -1,36 +1,38 @@
 ---
-import HeaderEyes from "./HeaderEyes.astro";
 import HeaderLinks from "./HeaderLinks.astro";
+import HeaderEyes from "./HeaderEyes.astro";
+import HeaderMenu from "./HeaderMenu.astro";
 ---
 <header class="bc2">
   <div id="header" class="flex vbox jcontent-between">
 
     <div class="header-right">
-      
       <div class="header-logo flex low-gap">
         <a href="" class="header-logo-link tc3"> کاسپین وب </a>
         <a href="" class="header-logo-link tc1"> آموزش </a>
       </div>
-      
       <p class="header-space tc1 sm-hide"> | </p>
-
       <HeaderLinks class="flex aitems-center low-gap sm-hide"/>
     </div>
 
-    <div class="header-left">
-      <HeaderEyes class=""/>
-      <div class="header-logos sm-hide">
-        <a href="" target="_blank" rel="noopener noreferrer" class="flex aitems-center">
-          <img src="/index/github.svg" alt="github logo icon" class="header-github-icon">
-        </a>
-      </div>
+    <div class="header-left flex aitems-center">
+      <HeaderEyes class="md-hide"/>
+      <div class="header-logo-icons sm-hide"><a href="https://github.com/caspian-web/caspian-web" target="_blank" rel="noopener noreferrer" class="flex aitems-center"><img src="/index/github.svg" alt="github logo icon" class="header-github-icon"></a></div>
     </div>
 
   </div>
 </header>
+<HeaderMenu class="sm-hide md-hide bc2"/>
 
 <script type="module">
-  const header_eyes = document.querySelector("#header-eyes")
+  const header_eyes = document.querySelector("#header-eyes");
+  const header_menu = document.querySelector("#header-menu");
+  function toggle_eyes(){
+    header_eyes.classList.toggle("header-eyes-clicked")
+    header_menu.classList.toggle("sm-hide")
+    header_menu.classList.toggle("flex")
+  }
+  header_eyes.addEventListener('click', toggle_eyes);
 </script>
 
 <style>
