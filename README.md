@@ -3,7 +3,7 @@
 ```
 cd frontend
 npm install
-nom run astro dev
+nom run astro dev -- --host
 ```
 
 # Astro
