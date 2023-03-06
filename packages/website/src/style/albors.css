@@ -41,7 +41,7 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl;}
 
 .vbox{margin:auto;width:calc(100% - 1rem);}
 @media(min-width:768px){.vbox{width:calc(100% - 3rem);}}
-@media(min-width:1560px){.vbox{width:calc(1560px);}}
+/* @media(min-width:1560px){.vbox{width:calc(1560px);}} */
 
 @media(max-width:768px){.sm-hide{display:none;}}
 @media(min-width:768px){.md-hide{display:none;}}
