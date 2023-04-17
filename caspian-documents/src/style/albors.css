@@ -1,12 +1,9 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap');
 
-/* Variables */
-/* :root{--c1:#EAEAEA;--c2:#393E41;--c3:#AABD8C;--c4:#F78E69;--c5:#E65F5C;} */
-/* :root{--c1:#343434;--c2:#F5FBEF;--c3:#63B0CD;--c4:#4D9078;--c5:#A23E48;} */
-/* :root{--c1:#343434;--c2:#F5FBEF;--c3:#63B0CD;--c4:#4D9078;--c5:#A23E48;} */
-
+/* Variables  */
 :root{--c1:#503c24;--c2:#d4d0c9;--c3:#090C08;--c4:#4D9078;--c5:#A23E48;}/* Rust Color Pallete */
+
 /* Universal Styling */
 body{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl;}
 *{padding:0;margin:0;box-sizing:border-box;}
@@ -25,23 +22,18 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl;}
 
 /* Text */
 
-/* TODO: Box & Vbox Need A Overhull */
+/* Todo: Box & Vbox Need A Overhull */
 /* Box */
-.box-row{min-width:100%;}
-.box-column{min-height:100%;}
-.box-page{width:100%;min-height:calc(100vh);}
 
-/* Vbox */
-  /* .vbox{margin:auto;width:calc(100% - 1rem);} */
-  /* @media(min-width:768px){.vbox{width:calc(100% - 3rem);}} */
-  /* @media(min-width:1560px){.vbox{width:calc(1560px);}} */
-.box{margin:auto;width:calc(100vw - 1rem);}
-@media(min-width:768px){.box{width:calc(100% - 3rem);}}
-@media(min-width:1560px){.box{width:calc(1560px);}}
+.box{width:100vw;margin:auto;padding:0 1rem;}
 
-.vbox{margin:auto;width:calc(100vw - 1rem);}
+.vbox{width:calc(100vw - 1rem);margin:auto;}
 @media(min-width:768px){.vbox{width:calc(100% - 3rem);}}
 @media(min-width:1280px){.vbox{width:calc(1280px - 3rem);}}
+
+.box-row{width:100%;}
+.box-column{height:100%;}
+.box-page{width:100%;min-height:calc(100vh);}
 
 /* Grid */
 /* Flex */
@@ -66,3 +58,4 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl;}
 /* Hide */
 @media(max-width:768px){.sm-hide{display:none;}}
 @media(min-width:768px){.md-hide{display:none;}}
+
