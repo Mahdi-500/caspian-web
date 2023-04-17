@@ -1,0 +1,24 @@
+---
+import HeaderLinks from "./HeaderLinks.astro";
+const {class: className} = Astro.props;
+---
+<div id="header-menu" class={className}>
+  <HeaderLinks class="box-row flex aitems-center flex-col mid-gap"/>
+  <div class="header-logo-icons"><a href="https://github.com/caspian-web/caspian-web" target="_blank" rel="noopener noreferrer" class="flex jcontent-center aitems-center"><img src="/index/github.svg" alt="github logo icon" class="header-github-icon"></a></div>
+</div>
+
+<style>
+  #header-menu{
+    height: calc(100vh - 3rem);
+    
+    flex-direction:column;
+    justify-content:space-around;
+
+    position:sticky;
+    top:3rem;
+    z-index:2;
+  }
+    
+  .header-github-icon{width:2rem;transition:transform 0.3s ease-in;}
+  .header-github-icon:hover{transform:translate(0,-4px);}
+</style>
