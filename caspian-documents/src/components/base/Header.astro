@@ -1,0 +1,59 @@
+---
+
+---
+<header class="row bc1">
+
+  <div id="header" class="vbox flex aitems-center jcontent-between">
+
+    <div id="right-header" class="flex aitems-center">
+      <a href="/" id="title" class=""> کاسپین وب </a>
+      <a href="/"id="alt-title" class=""> داکیومنت </a>
+    </div>
+
+    <div id="left-header">
+      <div id="eyes" class="md-hide flex aitems-center jcontent-center">
+        <div id="eye1" class="eye bc2"></div>
+        <div id="eye2" class="eye bc2"></div>
+        <div id="eye3" class="eye bc2"></div>
+      </div>
+    </div>
+    
+  </div>
+
+</header>
+
+<style>
+  :root{--c1:#503c24;--c2:#d4d0c9;--c3:#090C08;--c4:#4D9078;--c5:#A23E48;}/* Rust Color Pallete */
+  /* Headers */
+  #header{
+    height:3rem;
+  }
+  #right-header a{
+    text-decoration:none;
+  }
+  #left-header{}
+
+  /* Titles */
+  a#title{color:var(--c2);}
+  a#title:hover{}
+
+  a#alt-title{color:var(--c1);background-color:var(--c2);}
+  a#alt-title:hover{}
+
+  a#title,a#alt-title{
+    padding:0 4px;
+    border-radius:3px;
+  }
+  a#title:hover,a#alt-title:hover{text-decoration:underline;}
+
+
+  /* Eyes */
+  #eyes{
+    width:32px;height:32px;
+    gap:4px;
+  }
+  .eye{
+    width:8px;height:8px;
+    border-radius:2px;
+  }
+</style>

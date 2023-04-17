@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import IconCard from "../components/index/IconCard.astro";
+import IconCards from "../components/index/IconCards.astro";
+
+---
+<Layout>
+  <div class="vbox">
+
+    <IconCards ics_title="زبان های برنامه نویسی">
+      <a href="./todo" class="tc1">Todos</a>
+
+      <IconCard 
+        ic_title=" جاوا اسکریپت " 
+        ic_atitle="Js" 
+        ic_img_url="/icons/js.svg" 
+        ic_end_url="/programming/sample"
+      />
+      <IconCard 
+        ic_title=" راست " 
+        ic_atitle="Rust" 
+        ic_img_url="/icons/rust.svg" 
+        ic_end_url="/programming/rust"
+      />
+      
+      
+    </IconCards>
+
+  </div>
+	
+</Layout>
+
+<style>
+
+</style>
