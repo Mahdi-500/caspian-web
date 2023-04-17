@@ -1,0 +1,42 @@
+---
+const section_title = " سمپل | Sample "
+
+//! Imports 
+import Layout from "../../../layouts/Layout.astro";
+import PartMapper from "../../../components/PartMapper.astro";
+import type { MDXInstance } from "astro";
+
+//! How To Sort Astro Glob
+// https://www.youtube.com/watch?v=Eq0j71oLsFs
+// https://caseyjamesperno.com/blog/sort-astro-glob/
+
+//! Types 
+type Part = {title:string;id:string;url:MDXInstance;}
+type Parts = Array<Part>
+
+// const part1:Part = {url:await Astro.glob('./partN/*.mdx'),title:"title",id:"id",}
+const part1:Part = {url:await Astro.glob('./partN/*.mdx'),title:"پارت اول : موضوع سمپل",id:"part1",}
+
+const parts:Parts = [part1]
+---
+<Layout section_title={section_title}>
+  <div class="vbox">
+
+    <div id="section-title" class="tc1"><h3>{section_title}</h3></div>
+
+    {parts.map((part)=>
+        <PartMapper
+          part_title={part.title} 
+          part_id={part.id} 
+          part_url={part.url}
+        />
+    )}
+
+  </div>
+</Layout>
+
+<style>
+  #section-title{margin:0.5rem 0;}
+  
+
+</style>
