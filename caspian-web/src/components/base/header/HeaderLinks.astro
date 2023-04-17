@@ -2,18 +2,20 @@
 const {class: className} = Astro.props;
 ---
 <div id="header-links" class={className}>
-  <a href="/javascript/" class="header-link tc1"> آموزش </a>
+  <a href="" class="header-link tc1"> اخبار </a>
+  <a href="" class="header-link tc1"> بلاگ </a>
+  <a href="" class="header-link tc1"> آموزش </a>
   <a href="" class="header-link tc1"> داکیومنت </a>
   <a href="" class="header-link tc1"> پروژه ها </a>
-  <a href="" class="header-link tc1"> بلاگ </a>
-  <a href="" class="header-link tc1"> حمایت مالی </a>
+  <!-- <a href="" class="header-link tc1"> حمایت مالی </a> -->
 </div>
 
 <style>
   #header-links{
   }
-  #header-links > a{
-  }
-  .header-link{transition:transform 0.3s ease-in;}
-  .header-link:hover{transform:translate(0,-4px);}
+  #header-links a{text-decoration:none;}
+  #header-links a:hover{border-bottom:1px solid white;}
+
+  /* .header-link{transition:transform 0.3s ease-in;}
+  .header-link:hover{transform:translate(0,-4px);} */
 </style>
