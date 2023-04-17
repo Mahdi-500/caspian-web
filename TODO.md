@@ -1,0 +1,2 @@
+- [ ] MONO REPO SETUP
+- [ ] Docker / Docker Compose
