@@ -11,13 +11,13 @@ import type { MDXInstance } from "astro";
 // https://caseyjamesperno.com/blog/sort-astro-glob/
 
 //! Types 
-type Part = {title:string;id:string;url:MDXInstance;}
-type Parts = Array<Part>
+// type Part = {title:string;id:string;url:MDXInstance;}
+// type Parts = Array<Part>
 
 // const part1:Part = {url:await Astro.glob('./partN/*.mdx'),title:"title",id:"id",}
-const part1:Part = {url:await Astro.glob('./partN/*.mdx'),title:"پارت اول : موضوع سمپل",id:"part1",}
+const part1 = {url:await Astro.glob('./partN/*.md'),title:"پارت اول : موضوع سمپل",id:"part1",}
 
-const parts:Parts = [part1]
+const parts = [part1]
 ---
 <Layout section_title={section_title}>
   <div class="vbox">

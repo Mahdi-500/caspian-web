@@ -1,26 +1,22 @@
 ---
-
+import HeaderLinks from "./HeaderLinks.astro";
 ---
-<header class="row bc1">
+<div id="header" class="bc1 box flex aitems-center jcontent-between">
 
-  <div id="header" class="vbox flex aitems-center jcontent-between">
-
-    <div id="right-header" class="flex aitems-center">
+  <div id="right_subheader" class="flex aitems-center low-gap">
+    <div id="header_title" class="flex low-gap">
       <a href="/" id="title" class=""> کاسپین وب </a>
-      <a href="/"id="alt-title" class=""> داکیومنت </a>
+      <a href="/documents"id="alt-title" class=""> داکیومنت </a>
     </div>
-
-    <div id="left-header">
-      <div id="eyes" class="md-hide flex aitems-center jcontent-center">
-        <div id="eye1" class="eye bc2"></div>
-        <div id="eye2" class="eye bc2"></div>
-        <div id="eye3" class="eye bc2"></div>
-      </div>
-    </div>
-    
+    <p id="header_logo-space" class="tc2 sm-hide"> | </p>
+    <HeaderLinks class="flex aitems-center mid-gap sm-hide"/>
   </div>
 
-</header>
+  <div id="left_subheader">
+
+  </div>
+  
+</div>
 
 <style>
   :root{--c1:#503c24;--c2:#d4d0c9;--c3:#090C08;--c4:#4D9078;--c5:#A23E48;}/* Rust Color Pallete */
@@ -28,10 +24,10 @@
   #header{
     height:3rem;
   }
-  #right-header a{
+  #right_subheader a{
     text-decoration:none;
   }
-  #left-header{}
+  #left_subheader{}
 
   /* Titles */
   a#title{color:var(--c2);}
@@ -40,20 +36,12 @@
   a#alt-title{color:var(--c1);background-color:var(--c2);}
   a#alt-title:hover{}
 
-  a#title,a#alt-title{
+  a#alt-title{
     padding:0 4px;
     border-radius:3px;
   }
-  a#title:hover,a#alt-title:hover{text-decoration:underline;}
+  a#alt-title:hover{text-decoration:underline;}
 
-
-  /* Eyes */
-  #eyes{
-    width:32px;height:32px;
-    gap:4px;
-  }
-  .eye{
-    width:8px;height:8px;
-    border-radius:2px;
-  }
+  a#title{transition:transform 0.3s ease-in;}
+  a#title:hover{transform:translate(0,-4px);}
 </style>
