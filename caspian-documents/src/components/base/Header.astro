@@ -1,19 +1,19 @@
 ---
-
+import HeaderLinks from "./HeaderLinks.astro";
 ---
 <div id="header" class="bc1 box flex aitems-center jcontent-between">
 
   <div id="right_subheader" class="flex aitems-center low-gap">
-    <a href="/" id="title" class=""> کاسپین وب </a>
-    <a href="/"id="alt-title" class=""> داکیومنت </a>
+    <div id="header_title" class="flex low-gap">
+      <a href="/" id="title" class=""> کاسپین وب </a>
+      <a href="/documents"id="alt-title" class=""> داکیومنت </a>
+    </div>
+    <p id="header_logo-space" class="tc2 sm-hide"> | </p>
+    <HeaderLinks class="flex aitems-center mid-gap sm-hide"/>
   </div>
 
   <div id="left_subheader">
-    <div id="eyes" class="md-hide flex aitems-center jcontent-center">
-      <div id="eye1" class="eye bc2"></div>
-      <div id="eye2" class="eye bc2"></div>
-      <div id="eye3" class="eye bc2"></div>
-    </div>
+
   </div>
   
 </div>
@@ -40,16 +40,8 @@
     padding:0 4px;
     border-radius:3px;
   }
-  a#title:hover,a#alt-title:hover{text-decoration:underline;}
+  a#alt-title:hover{text-decoration:underline;}
 
-
-  /* Eyes */
-  #eyes{
-    width:32px;height:32px;
-    gap:4px;
-  }
-  .eye{
-    width:8px;height:8px;
-    border-radius:2px;
-  }
+  a#title{transition:transform 0.3s ease-in;}
+  a#title:hover{transform:translate(0,-4px);}
 </style>
