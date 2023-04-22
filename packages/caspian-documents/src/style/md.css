@@ -1,0 +1,11 @@
+pre{
+  background-color:var(--c1) !important;
+  border-radius: 4px;
+  padding:1rem;
+  direction: ltr;
+
+}
+code{
+  line-height:1.5rem;
+  font-size: larger;
+}

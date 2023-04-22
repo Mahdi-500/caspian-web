@@ -1,0 +1,16 @@
+{
+  "name": "caspian-web",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "astro": "^2.3.0"
+  },
+  "devDependencies": {
+    "nx": "15.9.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

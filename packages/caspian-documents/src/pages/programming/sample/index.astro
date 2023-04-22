@@ -1,0 +1,68 @@
+---
+const section = { 
+  title : " سمپل | Sample ",
+  url: "/documents/programming/sample"
+}
+
+//! Imports 
+import Layout from "../../../layouts/Layout.astro";
+import PartMapper from "../../../components/PartMapper.astro";
+import IntroTo from "./_components/intro_to.astro";
+
+
+//! How To Sort Astro Glob
+// https://www.youtube.com/watch?v=Eq0j71oLsFs
+// https://caseyjamesperno.com/blog/sort-astro-glob/
+
+
+// const part1:Part = {get_url:await Astro.glob('./**/*.md'),title:"پارت اول : موضوع سمپل",id:"part1",}
+
+
+// const parts = [part1]
+
+
+//! TYPES
+
+type Part = {
+  id:string;
+  title:string;
+  url:any;
+};
+
+type Parts = Part[]
+
+//! Values
+
+let partN:Part = {id:"",title:"1",url:await Astro.glob('./partN/*.md')};
+let part1:Part = {id:"",title:"1",url:await Astro.glob('./partN/*.md')};
+let part2:Part = {id:"",title:"1",url:await Astro.glob('./partN/*.md')};
+let part3:Part = {id:"",title:"1",url:await Astro.glob('./partN/*.md')};
+let part4:Part = {id:"",title:"1",url:await Astro.glob('./partN/*.md')};
+
+const parts:Parts = [partN,part1,part2,part3,part4];
+---
+<Layout section_title={section.title}>
+  <div id="javascript_documents" class="vbox">
+
+    <a href={section.url} class="tc1">
+      <div id="section-title" class="tc1"><h3>{section.title}</h3></div>
+    </a>
+
+    <IntroTo/>
+    
+    {parts.map((part)=>
+        <PartMapper
+          part_title={part.title} 
+          part_id={part.id} 
+          part_url={part.url}
+        />
+    )}
+
+  </div>
+</Layout>
+
+<style>
+  #section-title{margin:1rem 0;}
+  
+
+</style>

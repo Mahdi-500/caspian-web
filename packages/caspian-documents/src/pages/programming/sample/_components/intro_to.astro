@@ -1,0 +1,64 @@
+---
+// TODO: NEED A REWIND 
+
+---
+<div id="intro_to" class="grid high-gap">
+  <div id="intro_to-right_section" class="grid low-gap">
+    <div id="search_bar" class="flex aitems-center">
+      <input type="text" class="brc1">
+      <button type="submit"> جست و جو </button>
+    </div>
+    <a href="https://github.com/caspian-web/caspian-web" target="_blank" rel="noopener noreferrer" id="intro_to-link" class=""> گیت هاب </a>
+    <a href="/support" target="_blank" rel="noopener noreferrer" id="intro_to-link" class=""> حمایت مالی </a>
+  </div>
+  <div id="intro_to-left_section" class="">
+    <div id="intro_to-left_links" class="grid low-gap">
+      <!-- <a href="" id="intro_to-link" class=""> sample </a> -->
+      <a href="https://javascript.info/" id="intro_to-link" class=""> جاوا اسکریپت اینفو  </a>
+      <a href="https://www.typescriptlang.org/" id="intro_to-link" class=""> تایپ اسکریپت  </a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" id="intro_to-link" class=""> داکیومنت مازیلا  </a>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  #intro_to{margin:1rem 0;}
+  @media(min-width:768px){
+    #intro_to{
+      grid-template-columns:1fr 1fr;
+    }
+  }
+
+  #intro_to-right_section{grid-template-columns:1fr 1fr;}
+  
+  #search_bar{grid-column:span 2;}
+  #search_bar input{width:100%;height:28px}#search_bar button{width:120px;height:32px;}
+
+
+  #intro_to-left_links{grid-template-columns:1fr 1fr;}
+  #intro_to-link{background-color:var(--c1);color:var(--c2);padding:2px;border-radius:4px;text-align:center;height:32px;}
+
+  #intro_to-right_section button[type="submit"]{
+    background-color:var(--c1);
+    color: var(--c2);
+    box-shadow: none;
+    font-size: large;
+    font-weight:bold;
+    border:2px solid var(--c1);
+    
+    border-radius:4px 0 0 4px;
+  }
+  #intro_to-right_section button:hover[type="submit"]{
+    cursor: pointer;
+    padding-bottom:5px;
+  }
+  
+
+  input[type="text"]{
+  all: unset;
+  border:2px solid var(--c1);
+  border-radius:0 4px 4px 0;
+  padding:0 4px;
+  }
+</style>
