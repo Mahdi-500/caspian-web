@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "caspian-documents",
+  "description": "caspian-web documents",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
