@@ -1,0 +1,90 @@
+---
+
+const date = "۱۴۰۲";
+---
+<footer class=" flex flex-col">
+  
+  <div id="footer-top" class="vbox flex jcontent-between">
+
+    <div id="footer-right" class="footer_top tc2 text-bold">
+      <p>محصولات</p>
+      <a href="/personal/" class="tc5">کاسپین وب</a>
+      <slot name="footer-right"/>
+    </div>
+
+    <div id="footer-middle" class="footer_top tc2 text-bold">
+      <p>ارتباطات</p>
+      <a href="/contact/" class="tc5">تماس با ما</a>
+      <a href="/forum/" class="tc5">انجمن</a>
+
+      <slot name="footer-middle"/>
+    </div>
+    
+    <div id="footer-left" class="footer_top tc2 text-bold">
+      <p>اطلاعات</p>
+      <a href="/news/" class="tc5">اخبار</a>
+      <a href="/blog/" class="tc5">بلاگ</a>
+      <a href="/faq/" class="tc5">سوالات متداول</a>
+
+      <slot name="footer-left"/>
+    </div>
+
+  </div>
+
+  <div id="footer-bottom" class="vbox flex jcontent-between aitems-center">
+
+    <div id="footer_bottom-right" class="">
+      <div class="tc2 text-small text-bold flex low-gap aitems-center">
+        <p>
+          طراحی و تولید کاسپین وب 
+        </p>
+        <p>|</p>
+        <p>
+          ایران {date}
+        </p>
+      </div>
+    </div>
+
+    <div id="footer_bottom-middle" class="">
+
+    </div>
+    
+    <div id="footer_bottom-left" class="">
+      <small>
+        <a href="/lega/terms_of_use/" class="tc1">شرایط و مقررات</a>
+      </small>
+    </div>
+    
+  </div>
+</footer>
+
+<style>
+  footer{
+    box-shadow: 0px 10px 15px 16px rgba(0,0,0,0.1);
+    background: var(--c4);
+
+    background:  linear-gradient(to right top, #4d9078, #4d9078, #47998f, #47998f, #4d9078) padding-box,
+                 linear-gradient(to right,var(--c2), var(--c4), var(--c2),var(--c4)) border-box;
+    border-top: 3px solid transparent;
+
+  }
+
+  #footer-top{
+    padding:.5rem;
+  }
+  #footer-top a{color:var(--c1);}
+  #footer-bottom{
+    border-top:2px solid var(--c2);
+    padding:.5rem;
+  }
+
+  .footer_top{
+    
+    display:flex;
+    flex-direction:column;
+    gap:.125rem;
+  }
+  #footer-left{text-align:left;}
+  #footer-right{text-align:right;}
+  #footer-middle{text-align:center;}
+</style>

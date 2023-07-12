@@ -1,0 +1,19 @@
+
+footer a,#header a{text-decoration:none;font-size:small;font-weight: bold;}
+footer a:hover,#header a:hover{text-decoration:underline;}
+
+#header a.button{
+  width: 4rem;
+  text-align:center;
+  padding:0 0.5rem;
+  
+  border:2px solid var(--c3);
+  border-radius:0.25rem;
+}
+#header a.button:hover{
+  text-decoration:none;
+  background-color:var(--c4);
+  border:2px solid var(--c3);
+
+  transition:background-color .25s;
+}

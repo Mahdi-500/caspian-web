@@ -1,0 +1,25 @@
+---
+import BaseHead from "@layouts/BaseHead.astro";
+import BaseBody from "@layouts/BaseBody.astro";
+import BaseFooter from "@components/BaseFooter.astro";
+import BaseHeader from "@components/BaseHeader.astro";
+
+
+---
+<!DOCTYPE html>
+<html lang="en">
+  <BaseHead>
+
+  </BaseHead>
+
+  <BaseBody>
+    <BaseHeader></BaseHeader>
+    <div id="main">
+      <slot/>
+    </div>
+    <BaseFooter></BaseFooter>
+  </BaseBody>
+</html>
+<style>
+  #main{min-height:calc(100vh - 3rem);}
+</style>

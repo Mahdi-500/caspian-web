@@ -1,0 +1,26 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import "@styles/colors/caspian-web.css"
+
+import Intro from "@components/index/Intro.astro"
+import Blog from "@components/index/Blog.astro"
+import Document from "@components/index/Document.astro"
+import News from "@components/index/News.astro"
+import Learn from "@components/index/Learn.astro"
+import Outro from "@components/index/Outro.astro"
+
+---
+<BaseLayout>
+	<div class="main">
+		<Intro/>
+		<Learn/>
+		<Document/>
+		<News/>
+		<Blog/>
+		<Outro/>
+	</div>
+</BaseLayout>
+
+<style>
+
+</style>

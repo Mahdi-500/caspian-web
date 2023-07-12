@@ -1,0 +1,39 @@
+---
+
+---
+<div id="index-intro" class="flex">
+  <div class="bg"></div>
+  <div class="vbox">
+
+  </div>
+</div>
+
+<style>
+
+  .bg{
+    width:100%;
+    height:calc(100vh - 3rem);
+    position: absolute;
+    z-index: -1;
+
+    background-color: var(--c2);
+    opacity: 0.1;
+    background-image:  linear-gradient(var(--c1) 1px, transparent 1px), linear-gradient(to right, var(--c1) 1px, var(--c2) 1px);
+    background-size: 16px 16px;
+  }
+
+#index-intro{
+  height:calc(100vh - 3rem);
+  
+}
+@media(min-width:768px){
+  .bg,#index-intro{
+    height: 30rem;
+  }
+  
+}
+
+</style>
+
+
+
