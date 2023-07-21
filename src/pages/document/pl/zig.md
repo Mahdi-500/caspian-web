@@ -3,8 +3,8 @@ layout: "./_PLLayout.astro"
 title: زیگ | Zig
 author: آریا بختیاری
 editor: 
-version: 
-key_words:  
+version: 0.1.0
+key_words: 
 description: 
 ---
 

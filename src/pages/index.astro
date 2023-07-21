@@ -7,6 +7,7 @@ import Blog from "@components/index/Blog.astro"
 import Document from "@components/index/Document.astro"
 import News from "@components/index/News.astro"
 import Learn from "@components/index/Learn.astro"
+import Outro from "@components/index/Outro.astro"
 
 
 // SEO Section
@@ -14,7 +15,7 @@ const title= "کاسپین وب | caspian-web";
 const section_title= "";
 const author= "";
 const key_words= "";
-const description= "";
+const description= "کاسپین وب آموزش را رایگان و آسان و بدست مردم میرساند";
 ---
 <BaseLayout title={title} section_title={section_title} description={description} key_words={key_words} author={author}>
 	
@@ -31,6 +32,7 @@ const description= "";
 		<Document/>
 		<News/>
 		<Blog/>
+		<Outro/>
 	</div>
 </BaseLayout>
 
