@@ -1,37 +1,37 @@
 ---
 
 ---
-<div id="index-intro" class="flex jcontent-center aitems-center">
-  <div id="intro" class="vbox">
-    <a href="#blog" class="tc1">بلاگ</a>
-    <a href="#news" class="tc1">اخبار</a>
-    <a href="#document" class="tc1">داکیومنت</a>
-    <a href="#learn" class="tc1">آموزش</a>
+<div id="index" class="flex flex-col aitems-center">
+  
+  <div id="intro" class="flex flex-col jcontent-center aitems-center">
+    <p class="tc1 text-bold text-xxlarge">
+       کاسپین وب 
+       <span class="tc2 text-bold text-xlarge"> یعنی </span>
+    </p>
+    <p class="tc2 text-bold text-xlarge"> آموزش رایگان و آسان وب  </p>
+    <p class="tc1 text-bold text-xxlarge">برای همه</p>
   </div>
+
+  <div id="intro-links" class="tc1 text-bold flex high-gap sm-hide">
+    <a href="/news/">اخبار</a>
+    <a href="/blog/">بلاگ</a>
+    <a href="/learn/">آموزش</a>
+    <a href="/document/">داکیومنت</a>
+  </div>
+
 </div>
 
 <style>
-#intro{
-  display:flex;
-  flex-direction:column;
-  align-items:space-between;
-}
-#index-intro{
-  height:calc(100vh - 3rem);
+#index{
+  min-height:calc(100vh - 3rem);
+  justify-content: space-evenly;
   background-image: linear-gradient(to top, #343434, #3e424a, #40535f, #3c6571, #39787a, #3c807b, #43887a, #4d9078, #4d9078, #4d9078, #4d9078, #4d9078);
 }
+#intro{}
 @media(min-width:768px){
-  #index-intro{
-    height: 30rem;
-  }
-  #intro{
-    flex-direction:row;
-    justify-content:space-evenly;
-
-  }
+  #index{min-height: 30rem;}
+  #intro-links a:hover{text-decoration:underline;text-decoration-thickness:1.5px;}
 }
-
-
 </style>
 
 
