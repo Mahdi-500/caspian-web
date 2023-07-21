@@ -1,0 +1,41 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import "@styles/colors/caspian-documents.css";
+import "./_pllayout.css";
+
+const {frontmatter} = Astro.props;
+
+
+// SEO Section
+const title= frontmatter.title;
+const section_title= "داکیومنت";
+const author= frontmatter.author;
+const key_words= frontmatter.key_words;
+const description= frontmatter.description;
+---
+<BaseLayout title={title} section_title={section_title} description={description} key_words={key_words} author={author}>
+	
+  <div slot="header-left" class="tc1 flex aitems-center mid-gap sm-hide">
+		<a href="/news/" class="">اخبار</a>
+		<a href="/blog/" class="">بلاگ</a>
+		<a href="/learn/" class="">آموزش</a>
+		<a href="/document/" class="">داکیومنت</a>
+	</div>
+
+  <div class="main">
+   
+    <div id="slot" class="vbox">
+      <div id="doc_info" class="tc1">
+        <p class="text-bold text-medium"> موضوع : {frontmatter.title}</p>
+        <p class="text-bold text-small"> نویسندگان : {frontmatter.author}</p>
+        <p class="text-bold text-small"> نسخه : {frontmatter.version}</p>
+
+      </div>
+      <slot/>
+    </div>
+	</div>
+</BaseLayout>
+
+<style>
+  .main{margin:1rem auto;}
+</style>
