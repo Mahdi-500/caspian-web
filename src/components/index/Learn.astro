@@ -4,9 +4,9 @@
 <div id="index" class="vbox flex flex-col jcontent-center aitems-center">
 
   <p class="tc1 text-bold text-large">
-    <span class="tc4 text-xxlarge">
+    <a href="/learn/" id="learn_link" class="tc4 text-xxlarge text-underline text-wavy">
       آموزش
-    </span>
+    </a>
     <span>
       را همین
     </span>
@@ -42,6 +42,14 @@
 </div>
 
 <style>
+#learn_link{
+  text-decoration-color:var(--c4);
+  transition:text-decoration .3s,color .3s;
+}
+#learn_link:hover{
+  color: #4e725e;
+  text-decoration-color:#476454;
+}
 #learn{margin-top:2rem;}
 #learn a{
   color:var(--c4);
