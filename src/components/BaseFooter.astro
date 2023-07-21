@@ -1,47 +1,73 @@
 ---
 
-const date = "۱۴۰۲";
----
-<footer class=" flex flex-col">
-  
-  <div id="footer-top" class="vbox flex jcontent-between">
+const date = "۱۴۰۲ - ۱۴۰۲";
 
-    <div id="footer-right" class="footer_top tc2 text-bold">
+// Astro Props
+type Props={
+  bg_color1?: string;
+  bg_color2?: string;
+  bg_color3?: string;
+  text_color1?: string;
+  text_color2?: string;
+  text_color3?: string;
+  logo_color?: string;
+  link_color1?: string;
+  link_color2?: string;
+  link_color3?: string;
+};
+const {
+  bg_color1="bgc2",
+  bg_color2="",
+  bg_color3="",
+
+  text_color1="tc1",
+  text_color2="tc1",
+  text_color3="",
+
+  logo_color="tc4",
+
+  link_color1="tc4",
+  link_color2="tc1",
+  link_color3="tc1",
+
+} = Astro.props;
+const sub_footer_style = "flex aitems-center low-gap";
+---
+<footer id="footer" class=`${bg_color1} flex flex-col text-bold`>
+  <div class=`${bg_color2}`><div id="footer-top" class="vbox flex jcontent-between">
+
+    <div id="footer-right" class=`${text_color1} footer_top text-right`>
       <p>محصولات</p>
-      <a href="/personal/" class="tc5">کاسپین وب</a>
+      <a href="/" class=`${link_color1}`> کاسپین وب </a>
+      <a href="/products/albors-css/" class=`${link_color1}`> البرز (css) </a>
       <slot name="footer-right"/>
     </div>
 
-    <div id="footer-middle" class="footer_top tc2 text-bold">
+    <div id="footer-middle" class=`${text_color1} footer_top text-center`>
       <p>ارتباطات</p>
-      <a href="/contact/" class="tc5">تماس با ما</a>
-      <a href="/forum/" class="tc5">انجمن</a>
-
+      <a href="/contact/" class=`${link_color1}`>تماس با ما</a>
+      <a href="/forum/" class=`${link_color1}`>انجمن</a>
       <slot name="footer-middle"/>
     </div>
     
-    <div id="footer-left" class="footer_top tc2 text-bold">
+    <div id="footer-left" class=`${text_color1} footer_top text-left`>
       <p>اطلاعات</p>
-      <a href="/news/" class="tc5">اخبار</a>
-      <a href="/blog/" class="tc5">بلاگ</a>
-      <a href="/faq/" class="tc5">سوالات متداول</a>
-
+      <a href="/news/" class=`${link_color1}`>اخبار</a>
+      <a href="/blog/" class=`${link_color1}`>بلاگ</a>
+      <a href="/faq/" class=`${link_color1}`>سوالات متداول</a>
       <slot name="footer-left"/>
     </div>
 
-  </div>
+  </div></div>
 
-  <div id="footer-bottom" class="vbox flex jcontent-between aitems-center">
+  <div class=`${bg_color3}`><div id="footer-bottom" class="vbox">
 
     <div id="footer_bottom-right" class="">
-      <div class="tc2 text-small text-bold flex low-gap aitems-center">
-        <p>
-          طراحی و تولید کاسپین وب 
-        </p>
+      <div class=`${text_color2} text-small flex low-gap aitems-center`>
+        <p>طراحی و تولید </p>
+        <a href="https://caspian-web.ir" class=`${logo_color}`>کاسپین وب </a>
         <p>|</p>
-        <p>
-          ایران {date}
-        </p>
+        <p> ایران {date} </p>
       </div>
     </div>
 
@@ -49,42 +75,50 @@ const date = "۱۴۰۲";
 
     </div>
     
-    <div id="footer_bottom-left" class="">
-      <small>
-        <a href="/lega/terms_of_use/" class="tc1">شرایط و مقررات</a>
-      </small>
+    <div id="footer_bottom-left" class=`${logo_color} flex low-gap`>
+        <a href="/lega/terms_of_use/" class="">شرایط و مقررات</a>
+        <p>|</p>
+        <a href="/lega/privacy_policy/" class="">سیاست حفظ حریم شخصی</a>
     </div>
     
-  </div>
+  </div></div>
+
 </footer>
+
 
 <style>
   footer{
-    box-shadow: 0px 10px 15px 16px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 4px 8px rgba(0,0,0,0.1);
     background: var(--c4);
-
-    background:  linear-gradient(to right top, #4d9078, #4d9078, #47998f, #47998f, #4d9078) padding-box,
-                 linear-gradient(to right,var(--c2), var(--c4), var(--c2),var(--c4)) border-box;
-    border-top: 3px solid transparent;
-
+    border-top: 2px solid var(--c4);
   }
 
   #footer-top{
     padding:.5rem;
   }
-  #footer-top a{color:var(--c1);}
   #footer-bottom{
-    border-top:2px solid var(--c2);
-    padding:.5rem;
+    border-top:2px solid var(--c4);
+    border-radius:2px;
+    padding:1rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: .5rem;
   }
 
   .footer_top{
-    
     display:flex;
     flex-direction:column;
     gap:.125rem;
   }
-  #footer-left{text-align:left;}
-  #footer-right{text-align:right;}
-  #footer-middle{text-align:center;}
+  @media(min-width:768px){
+    #footer-bottom{justify-content:space-between;}
+  }
+
+  #footer a{text-decoration:none;font-size:small;font-weight:bold;}
+  #footer a:hover{text-decoration:underline;}
+
+  #footer-bottom,#footer-top{
+    margin: .5rem auto;
+  }
 </style>

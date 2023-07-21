@@ -4,20 +4,49 @@ import BaseBody from "@layouts/BaseBody.astro";
 import BaseFooter from "@components/BaseFooter.astro";
 import BaseHeader from "@components/BaseHeader.astro";
 
-
+// Astro Props
+type Props={
+  title: string;
+  section_title?:string;
+  author?:string;
+  key_words?:string;
+  description?: string;
+};
+const {
+  title,
+  section_title,
+  description,
+  key_words,
+  author
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
-  <BaseHead>
+  <BaseHead {title} {description} {key_words} {author}>
 
   </BaseHead>
 
   <BaseBody>
-    <BaseHeader></BaseHeader>
+
+    <BaseHeader {section_title}>
+      <div slot="header-right">
+        <slot name="header-right"/>
+      </div>
+      <div slot="header-middle">
+        <slot name="header-middle"/>
+      </div>
+      <div slot="header-left">
+        <slot name="header-left"/>
+      </div>
+    </BaseHeader>
+    
     <div id="main">
       <slot/>
     </div>
-    <BaseFooter></BaseFooter>
+
+    <BaseFooter>
+    </BaseFooter>
+
   </BaseBody>
 </html>
 <style>

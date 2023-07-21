@@ -1,7 +1,8 @@
 ---
-
+// Astro Props
+type Props={bg_color?: string;};
+const {bg_color="bgc2"} = Astro.props;
 ---
-<body class="bgc2">
-  
+<body class=`${bg_color}`>
   <slot/>
 </body>

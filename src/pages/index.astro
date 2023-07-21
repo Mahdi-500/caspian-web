@@ -7,17 +7,30 @@ import Blog from "@components/index/Blog.astro"
 import Document from "@components/index/Document.astro"
 import News from "@components/index/News.astro"
 import Learn from "@components/index/Learn.astro"
-import Outro from "@components/index/Outro.astro"
 
+
+// SEO Section
+const title= "کاسپین وب | caspian-web";
+const section_title= "";
+const author= "";
+const key_words= "";
+const description= "";
 ---
-<BaseLayout>
+<BaseLayout title={title} section_title={section_title} description={description} key_words={key_words} author={author}>
+	
+	<div slot="header-left" class="tc1 flex aitems-center mid-gap">
+		<a href="/news/" class="">اخبار</a>
+		<a href="/blog/" class="">بلاگ</a>
+		<a href="/learn/" class="">آموزش</a>
+		<a href="/document/" class="">داکیومنت</a>
+	</div>
+
 	<div class="main">
 		<Intro/>
 		<Learn/>
 		<Document/>
 		<News/>
 		<Blog/>
-		<Outro/>
 	</div>
 </BaseLayout>
 

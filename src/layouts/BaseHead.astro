@@ -6,18 +6,19 @@ import "@styles/albors.css"
 // Import images/icons
 import favicon from "@public/favicon.svg"
 
+
 // Astro Props
 type Props={
   title: string;
-  description: string;
-  key_words:string;
-  author:string;
+  author?:string;
+  key_words?:string;
+  description?: string;
 };
 const {
-  title,
-  description,
-  key_words,
-  author
+  title="No TITLE Available",
+  description="No DESCRIPTION Available",
+  key_words="No KEY_WORDS Available",
+  author="No AUTHOR Available"
 } = Astro.props;
 ---
 <head>

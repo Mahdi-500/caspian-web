@@ -1,14 +1,21 @@
 ---
 
 ---
-<div id="index-intro" class="flex">
-  <div class="vbox">
-
+<div id="index-intro" class="flex jcontent-center aitems-center">
+  <div id="intro" class="vbox">
+    <a href="#blog" class="tc1">بلاگ</a>
+    <a href="#news" class="tc1">اخبار</a>
+    <a href="#document" class="tc1">داکیومنت</a>
+    <a href="#learn" class="tc1">آموزش</a>
   </div>
 </div>
 
 <style>
-
+#intro{
+  display:flex;
+  flex-direction:column;
+  align-items:space-between;
+}
 #index-intro{
   height:calc(100vh - 3rem);
   background-image: linear-gradient(to top, #343434, #3e424a, #40535f, #3c6571, #39787a, #3c807b, #43887a, #4d9078, #4d9078, #4d9078, #4d9078, #4d9078);
@@ -16,6 +23,11 @@
 @media(min-width:768px){
   #index-intro{
     height: 30rem;
+  }
+  #intro{
+    flex-direction:row;
+    justify-content:space-evenly;
+
   }
 }
 

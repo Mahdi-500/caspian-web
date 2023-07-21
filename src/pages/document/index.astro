@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import "@styles/colors/caspian-documents.css"
+
+import ProgrammingLanguages from "@components/document/ProgrammingLanguages.astro"
+import Os from "@components/document/Os.astro"
+import Products from "@components/document/Products.astro"
+
+
+
+
+// SEO Section
+const title= "داکیومنت";
+const section_title= "داکیومنت";
+const author= "";
+const key_words= "";
+const description= "";
+---
+<BaseLayout title={title} section_title={section_title} description={description} key_words={key_words} author={author}>
+	
+  <div slot="header-left" class="tc1 flex aitems-center mid-gap sm-hide">
+		<a href="/news/" class="">اخبار</a>
+		<a href="/blog/" class="">بلاگ</a>
+		<a href="/learn/" class="">آموزش</a>
+		<a href="/document/" class="">داکیومنت</a>
+	</div>
+
+  <div class="main">
+    <Products/>
+    <ProgrammingLanguages/>
+    <Os/>
+
+	</div>
+</BaseLayout>
+
+<style>
+
+  
+</style>
