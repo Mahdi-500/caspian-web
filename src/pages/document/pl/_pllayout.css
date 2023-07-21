@@ -1,0 +1,20 @@
+.main h1{font-weight:bold;color:var(--c4);margin-top:1rem;}
+/* .main h2, */
+/* .main h3, */
+/* .main h4, */
+/* .main h5, */
+/* .main h6{
+  color: var(--c4);
+} */
+.main p{}
+
+.main a{font-size:small;font-weight:bold;color: var(--c5);padding:0 .25rem;}
+.main a:hover{text-decoration:underline;}
+
+.main li h1{color: #B3B492;font-size:130%;}
+.main li h2{margin-top:.75rem;color: var(--c4);}
+.main ul li:first-child h2{margin-top:.25rem;}
+
+.main ul{margin:.25rem 1rem;}
+.main li{color:var(--c1);font-size:small;font-weight:bold;margin:.0 0;}
+
