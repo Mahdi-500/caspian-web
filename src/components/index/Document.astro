@@ -1,24 +1,81 @@
 ---
 ---
-<div id="index-intro" class="">
-  <div class="vbox">
-    
+<div id="index" class="flex flex-col jcontent-center aitems-center">
+  <div class="vbox flex flex-col jcontent-center aitems-center high-gap">
+    <p class="tc2 text-bold text-xlarge">
+      <span>
+        با
+        <a href="/document/" id="document_link" class="tc1 text-xxlarge text-underline text-dashed">داکیومنت</a>
+        <br>
+        بیشتر از
+      </span>
+      <a href="/learn/" id="learn_link" class="tc1 text-xxlarge text-underline text-dashed">
+        آموزش
+      </a>
+      <span>
+        یاد بگیر
+      </span>
+    </p>
+
+    <div id="document" class="flex flex-wrap jcontent-center low-gap">
+      <a href="/document/pl/rust/">Rust</a>
+      <a href="/document/pl/rust/">Zig</a>
+      <a href="/document/pl/rust/">Go</a>
+      <a href="/document/pl/rust/">Js</a>
+      <a href="/document/pl/rust/">Ts</a>
+      <a href="/document/pl/rust/">Html</a>
+      <a href="/document/pl/rust/">Css</a>
+
+      <a href="/document/pl/rust/">C</a>
+      <a href="/document/pl/rust/">C++</a>
+      <a href="/document/pl/rust/">Php</a>
+      <a href="/document/pl/rust/">Python</a>
+      <a href="/document/pl/rust/">Java</a>
+      <a href="/document/pl/rust/">C#</a>
+      <a href="/document/pl/rust/">Arch Linux</a>
+      <a href="/document/pl/rust/">Debian Linux</a>
+      <a href="/document/pl/rust/">Fedora Linux</a>
+      <a href="/document/pl/rust/">Nixos Linux</a>
+      
+    </div>
   </div>
 </div>
-
 <style>
 
-#index-intro{
-  height:calc(100vh - 3rem);
-  box-shadow: 0px 10px 15px 16px rgba(0,0,0,0.1);
-  background-image: radial-gradient(circle, #4d9078, #4d9078, #4d9078, #4d9078, #4d9078, #43887a, #3c807b, #39787a, #3c6571, #40535f, #3e424a, #343434);
-}
-@media(min-width:768px){
-  #index-intro{
-    height: 30rem;
+  #index{
+    padding:2rem 0;
+    min-height:calc(60vh - 3rem);
+    box-shadow: 0px 10px 15px 16px rgba(0,0,0,0.1);
+    background-image: radial-gradient(circle, #4d9078, #4d9078, #4d9078, #4d9078, #4d9078, #43887a, #3c807b, #39787a, #3c6571, #40535f, #3e424a, #343434);
   }
-}
+  #document{direction:ltr;}
+  #document_link,#learn_link{
+    text-decoration-color:var(--c1);
+    transition:text-decoration .35s,color .3s;
+  }
+  #document_link:hover,#learn_link:hover{
+    color: var(--c2);
+    text-decoration-color:var(--c2);
+  }
+  #document a{
+    color:var(--c2);
+    border:2px solid var(--c2);
+    border-radius: 4px;
+    
+    padding:.25rem 1.5rem;
+    transition:color .3s,border .3s;
+  }
+  #document a:hover{
+    color:var(--c1);
 
+    border:2px solid var(--c1);
+  }
+  @media(min-width:768px){
+    #index{
+      min-height: 50vh;
+    }
+    #document{width:30rem;}
+  }
 
 </style>
 
