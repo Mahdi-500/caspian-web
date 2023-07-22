@@ -1,7 +1,7 @@
 ---
 
 ---
-<div id="index" class="vbox flex flex-col jcontent-center aitems-center">
+<div id="index" class="vbox flex flex-col jcontent-center aitems-center high-gap">
 
   <p class="tc1 text-bold text-large">
     <a href="/learn/" id="learn_link" class="tc4 text-xxlarge text-underline text-wavy">
@@ -42,6 +42,11 @@
 </div>
 
 <style>
+#index{
+  min-height:calc(60vh - 3rem);
+  padding:2rem 0;
+}
+#learn{direction:ltr;}
 #learn_link{
   text-decoration-color:var(--c4);
   transition:text-decoration .3s,color .3s;
@@ -50,7 +55,6 @@
   color: #4e725e;
   text-decoration-color:#476454;
 }
-#learn{margin-top:2rem;}
 #learn a{
   color:var(--c4);
   border:2px solid var(--c4);
@@ -72,9 +76,7 @@
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
-#index{
-  min-height:calc(60vh - 3rem);
-}
+
 @media(min-width:768px){
   #index{
     min-height: 50vh;
