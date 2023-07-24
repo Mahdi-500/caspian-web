@@ -1,42 +1,107 @@
 ---
-
 ---
-<div id="index" class="flex flex-col aitems-center">
 
-  <div id="intro" class="flex flex-col jcontent-center aitems-center">
-    <p class=" text-bold text-xxlarge">
-      <span class="tc1">
-        کاسپین وب 
-      </span>
-       <span class="tc2 text-bold text-xxlarge"> یعنی </span>
+<div id="index_box" class="">
+  <div id="index_box_bg" class=""></div>
+  <div id="intro_1" class="vbox tc1 flex flex-col aitems-center">
+    <p class="text-xxxlarge">سبکی جدید</p>
+    <p class="text-xxxlarge">آموزشی نو</p>
+  </div>
+  <div id="intro_2" class="vbox tc1 text-center">
+    <p>
+      سبکی برای آموزش که همیشه آرزویش را میکردی. سبکی که آموزش را ساده و آسان تر
+      کرده است. سبکی که یاد گرفتن را عمقی تر میکند ولی یادگرفتن را سخت تر نمی
+      کند.
     </p>
-    <p class="tc2 text-bold text-xxlarge"> آموزش رایگان و آسان   </p>
-    <p class="tc1 text-bold text-xxlarge">برای همه</p>
   </div>
-
-  <div id="intro-links" class="tc1 text-bold flex high-gap sm-hide">
-    <a href="/news/">اخبار</a>
-    <a href="/blog/">بلاگ</a>
-    <a href="/learn/">آموزش</a>
-    <a href="/document/">داکیومنت</a>
-  </div>
-
 </div>
 
 <style>
-  #index{
-    min-height:calc(50vh - 3rem);
-    justify-content: space-evenly;
-    background-image: linear-gradient(to top, #343434, #3e424a, #40535f, #3c6571, #39787a, #3c807b, #43887a, #4d9078, #4d9078, #4d9078, #4d9078, #4d9078);
+  #index_box {
+    min-height: calc(50vh - 3rem);
   }
-  .text-xxxlarge{font-size:300%;}
-  #intro{}
-  @media(min-width:768px){
-    #index{min-height: 50vh;}
-    #intro-links a:hover{text-decoration:underline;text-decoration-thickness:1.5px;}
+  
+  #index_box_bg{
+    width: 100%;
+    background: radial-gradient(
+      circle,
+      #66a182,
+      #4c8c84,
+      #43767d,
+      #45606d,
+      #434b55,
+      #40434a,
+      #3b3b3f,
+      #343434,
+      #343434,
+      #343434,
+      #343434,
+      #343434
+    );
+    background-repeat: no-repeat;
+    position: absolute;
+    
+    z-index: -101;
+
+    background-position: -10rem -40vh;
+
+    background-size:calc(100vh + 5rem);
+    height:calc(100vh + 5rem);
+
+    
+    background-color: var(--c2);
+    opacity: 0.5;
+
   }
 
+
+  #intro_1 {
+    padding-top: 10vh;
+  }
+  #intro_1 p {
+    line-height: 64px;
+  }
+  #intro_2 {
+    margin-top: 4vh;
+    width: 20rem;
+  }
+
+  .text-xxxlarge {
+    font-size: 64px;
+  }
+  @media (min-width: 768px) {
+    #intro_2 {
+      width: 30rem;
+    }
+    .text-xxxlarge {
+      font-size: 96px;
+    }
+    #intro_1 p {
+      line-height: 96px;
+    }
+    #intro_2 p {
+      font-size:large;
+    }
+    #index_box_bg{
+      left:calc(10vw + 10rem);
+      background-position: 0 calc(-20vw + -5rem);
+
+      background-size:calc(50vw + 20rem);
+      height:calc(50vw + 20rem);
+      
+    }
+    @media (min-width: 1286px) {
+      #index_box_bg{
+      left:calc(10vw + 15rem);
+      background-position: 0 -30rem;
+
+      background-size:80rem;
+      height:80rem;
+      
+    }
+
+    }
+
+
+  }
 </style>
-
-
-

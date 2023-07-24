@@ -8,18 +8,18 @@ const {frontmatter} = Astro.props;
 
 // SEO Section
 const title= frontmatter.title;
-const section_title= "داکیومنت";
+const section_title= "آموزش";
+const section_url= "/learn/";
 const author= frontmatter.author;
 const key_words= frontmatter.key_words;
 const description= frontmatter.description;
 ---
-<BaseLayout title={title} section_title={section_title} description={description} key_words={key_words} author={author}>
+<BaseLayout title={title} section_title={section_title} section_url={section_url} description={description} key_words={key_words} author={author}>
 	
   <div slot="header-left" class="tc1 flex aitems-center mid-gap sm-hide">
 		<a href="/news/" class="">اخبار</a>
 		<a href="/blog/" class="">بلاگ</a>
 		<a href="/learn/" class="">آموزش</a>
-		<a href="/document/" class="">داکیومنت</a>
 	</div>
 
   <div class="main">

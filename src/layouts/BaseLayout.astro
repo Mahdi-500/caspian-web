@@ -8,6 +8,7 @@ import BaseHeader from "@components/BaseHeader.astro";
 type Props={
   title: string;
   section_title?:string;
+  section_url?:string;
   author?:string;
   key_words?:string;
   description?: string;
@@ -15,6 +16,7 @@ type Props={
 const {
   title,
   section_title,
+  section_url,
   description,
   key_words,
   author
@@ -28,7 +30,7 @@ const {
 
   <BaseBody>
 
-    <BaseHeader {section_title}>
+    <BaseHeader {section_title} {section_url}>
       <div slot="header-right">
         <slot name="header-right"/>
       </div>

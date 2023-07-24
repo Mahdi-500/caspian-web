@@ -7,7 +7,6 @@ import Blog from "@components/index/Blog.astro"
 import Document from "@components/index/Document.astro"
 import News from "@components/index/News.astro"
 import Learn from "@components/index/Learn.astro"
-import Outro from "@components/index/Outro.astro"
 
 
 // SEO Section
@@ -23,19 +22,27 @@ const description= "کاسپین وب یعنی آموزش رایگان و آسا
 		<a href="/news/" class="">اخبار</a>
 		<a href="/blog/" class="">بلاگ</a>
 		<a href="/learn/" class="">آموزش</a>
-		<a href="/document/" class="">داکیومنت</a>
 	</div>
 
 	<div class="main">
+		<div class="bg"></div>
+
 		<Intro/>
 		<Learn/>
-		<Document/>
-		<News/>
-		<Blog/>
-		<Outro/>
 	</div>
 </BaseLayout>
 
 <style>
+  .bg{
+    width:100%;
+    min-height:100vh;
+    position: absolute;
+    z-index: -100;
+
+    background-color: var(--c2);
+    opacity: 0.02;
+    background-image:  linear-gradient(var(--c1) 1px, transparent 1px), linear-gradient(to right, var(--c1) 1px, var(--c2) 1px);
+    background-size: 16px 16px;
+  }
 
 </style>

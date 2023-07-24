@@ -4,19 +4,28 @@ import favicon from "@public/favicon.svg"
 // Astro Props
 type Props={
   section_title?:string;
+  section_url?:string;
+
+  logo_color?: string;
+  
   bg_color1?: string;
   bg_color2?: string;
   bg_color3?: string;
+
   text_color1?: string;
   text_color2?: string;
   text_color3?: string;
-  logo_color?: string;
+  
+  
   link_color1?: string;
   link_color2?: string;
   link_color3?: string;
 };
 const {
+  logo_color="tc4",
   section_title= "",
+  section_url="",
+
   bg_color1="bgc2",
   bg_color2="",
   bg_color3="",
@@ -25,7 +34,6 @@ const {
   text_color2="",
   text_color3="",
 
-  logo_color="tc3",
 
   link_color1="tc2",
   link_color2="tc2",
@@ -39,7 +47,7 @@ const sub_header_style = "flex aitems-center low-gap";
 
     <div id="header-right" class=`${link_color1} ${sub_header_style} mid-gap`>
       <a href="/" id="site_logo" class=`${logo_color} text-medium`> کاسپین وب </a>
-      <a href="/document/" id="section_title" class=`${logo_color} `> {section_title} </a>
+      <a href=`${section_url}` id="section_title" class=`${logo_color} `> {section_title} </a>
       <slot name="header-right"/>
     </div>
 
@@ -62,10 +70,7 @@ const sub_header_style = "flex aitems-center low-gap";
     border-bottom:2px solid var(--c4);
   }
   #header{height:3rem;}
-  #header a{color:var(--c1);}
-
-  a#site_logo{color:var(--c4);font-weight:bolder;font-size:medium;}
-
+  a#site_logo{font-weight:bolder;font-size:medium;}
 
 </style>
 

@@ -1,91 +1,99 @@
 ---
-
 ---
-<div id="index" class="vbox flex flex-col jcontent-center aitems-center high-gap">
 
-  <p class="tc1 text-bold text-large">
-    <a href="/learn/" id="learn_link" class="tc4 text-xxlarge text-underline text-wavy">
-      آموزش
-    </a>
-    <span>
-      را همین
-    </span>
-    <span class="tc4 text-xxlarge">
-      حالا
-    </span>
-    <span>
-        شروع کن 
-    </span>
-  </p>
+<div id="index_box" class="vbox flex flex-col aitems-center jcontent-center">
 
-  <div id="learn" class="flex flex-wrap jcontent-center low-gap">
-    <a href="/learn/pl/rust/">Rust</a>
-    <a href="/learn/pl/rust/">Zig</a>
-    <a href="/learn/pl/rust/">Go</a>
-    <a href="/learn/pl/rust/">Js</a>
-    <a href="/learn/pl/rust/">Ts</a>
-    <a href="/learn/pl/rust/">Html</a>
-    <a href="/learn/pl/rust/">Css</a>
+  <div id="learn" class="vbox flex flex-col aitems-center jcontent-center">
+    <p class="tc1 text-bold text-large">
+      <a href="/learn/" id="learn_page_link" class="tc4 text-underline">
+        آموزش
+      </a>
+      <span> را همین</span>
+      <span> حالا</span>
+      <span> شروع کن</span>
+    </p>
 
-    <a href="/learn/pl/rust/">C</a>
-    <a href="/learn/pl/rust/">C++</a>
-    <a href="/learn/pl/rust/">Php</a>
-    <a href="/learn/pl/rust/">Python</a>
-    <a href="/learn/pl/rust/">Java</a>
-    <a href="/learn/pl/rust/">C#</a>
-    <a href="/learn/pl/rust/">Arch Linux</a>
-    <a href="/learn/pl/rust/">Debian Linux</a>
-    <a href="/learn/pl/rust/">Fedora Linux</a>
-    <a href="/learn/pl/rust/">Nixos Linux</a>
-    
+    <div id="learn_box" class="vbox">
+      <div id="learn_links" class="flex flex-wrap jcontent-center low-gap">
+        <a href="/learn/programming_languages/rust/">Rust</a>
+        <a href="/learn/programming_languages/zig/">Zig</a>
+      </div>
+    </div>
   </div>
+
+  
 </div>
 
 <style>
-#index{
-  min-height:calc(60vh - 3rem);
-  padding:2rem 0;
-}
-#learn{direction:ltr;}
-#learn_link{
-  text-decoration-color:var(--c4);
-  transition:text-decoration .3s,color .3s;
-}
-#learn_link:hover{
-  color: #4e725e;
-  text-decoration-color:#476454;
-}
-#learn a{
-  color:var(--c4);
-  border:2px solid var(--c4);
-  border-radius: 1rem;
-  
-  padding:.25rem 1.5rem;
-  animation: learna 2s ease infinite;
-
-}
-#learn a:hover{
-  background: linear-gradient(var(--c2), var(--c2)) padding-box,
-              linear-gradient(to top right, var(--c4), var(--c2), var(--c4)) border-box;
-  border-radius: 1rem;
-  background-size: 300% 300%;
-  border: 2px solid transparent;
-}
-@keyframes learna {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-@media(min-width:768px){
-  #index{
-    min-height: 50vh;
+  #index_box {
+    min-height: calc(55vh - 3rem);
+    padding: 3rem 0;
   }
-  #learn{width:30rem;}
-}
+  #learn_box {
+    padding: 1rem 0.5rem;
+    min-height: 10rem;
+    border-radius: 4px;
+    background-image: linear-gradient(
+      to right top,
+      #39393c,
+      #3d3f44,
+      #3d3f44,
+      #41454d,
+      #434b55
+    );
+    border: 2px solid var(--c2);
+  }
+  #learn_links {
+    direction: ltr;
+  }
 
+  #learn p{
+    padding:1rem;
+  }
+  #learn_page_link {
+    text-decoration-color: var(--c4);
+    transition: text-decoration 0.3s, color 0.3s;
+    text-decoration-thickness: 1px;
+  }
+  #learn_page_link:hover {
+    color: #4e725e;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #476454;
+  }
+  #learn_links a {
+    background: var(--c2);
+    color: var(--c4);
+    border: 2px solid var(--c4);
+    border-radius: 1rem;
 
+    padding: 0.25rem 1.5rem;
+    animation: learna 2s ease infinite;
+  }
+  #learn_links a:hover {
+    background: linear-gradient(var(--c2), var(--c2)) padding-box,
+      linear-gradient(to top right, var(--c4), var(--c2), var(--c4)) border-box;
+    border-radius: 1rem;
+    background-size: 300% 300%;
+    border: 2px solid transparent;
+  }
+  @keyframes learna {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #index_box {
+      min-height: 50vh;
+    }
+    #learn_box {
+      width: 40rem;
+    }
+  }
 </style>
-
-
-
