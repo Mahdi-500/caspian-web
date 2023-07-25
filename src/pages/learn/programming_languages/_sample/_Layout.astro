@@ -72,54 +72,9 @@ import {Content as TopicMenu} from './menu.md';
 	</div>
 </BaseLayout>
 
-<script>
-  const hamb = document.querySelector("#hamb");
-  const close_hamb = document.querySelector(".close_hamb");
-  const tmenu = document.querySelector("#title_menu");
-  function toggle_menu() {
-    tmenu?.classList.toggle("not_selected");
-    tmenu?.classList.toggle("selected");
-  }
-  hamb?.addEventListener("click",toggle_menu);
-  close_hamb?.addEventListener("click",toggle_menu);
+<script>import '../_pl.js';</script>
 
-</script>
 
 <style>
-  
-  #main{padding:1rem 0;}
 
-  #headers{
-    width:18rem;
-    min-height: 10rem;
-  }
-
-  #header_1{padding:0rem .25rem;margin-top:.75rem;}
-  #header_1:first-child{margin-top:0;}
-  #header_1:hover{text-decoration:underline;}
-  #header_2{padding:.125rem .75rem;}
-  #header_2:hover{text-decoration:underline;}
-
-  #slot{
-    width:100%;
-  }
-
-  #main{
-    flex-direction:column;
-  }
-  @media(max-width:768px){
-    #headers{
-      margin: 1rem 0;
-      padding: .5rem 0;
-      width:100%;
-      border:2px solid var(--c3);
-    }
-  }
-  @media(min-width:768px){
-    #main{
-      flex-direction:row;
-    }
-  }
-
-  
 </style>
