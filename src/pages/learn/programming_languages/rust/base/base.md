@@ -1,5 +1,5 @@
 ---
-layout: "./_PLLayout.astro"
+layout: "../_RustLayout.astro"
 title: راست | Rust
 author: آریا بختیاری
 editor: 
@@ -49,17 +49,6 @@ description: زبان برنامه نویسی راست یک زبان
 - \- [Rust by Example](https://doc.rust-lang.org/rust-by-example/) 
 - \- [Standard Library](https://doc.rust-lang.org/std/)
 - \- [Cheat Sheet](https://cheats.rs/)
-
-# کتابخانه ها | Libraries
-- [Tokio]() : Async Runtime
-- [Serde]() : Serialize Deserialize
-- [Sea-orm]() : Orm
-- [Rocket]() : web
-- [Actix](https://actix.rs/) : web 
-- [Axum]() : web
-- [Tower]() : middleware
-- [Hyper]() : http
-- [Bevy]() : game engine
 
 # فریم ورک ها | Frameworks
 - \- [Dixosis]()

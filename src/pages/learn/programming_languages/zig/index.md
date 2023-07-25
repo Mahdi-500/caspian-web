@@ -1,5 +1,5 @@
 ---
-layout: "./_PLLayout.astro"
+layout: "../_PLLayout.astro"
 title: زیگ | Zig
 author: آریا بختیاری
 editor: 
