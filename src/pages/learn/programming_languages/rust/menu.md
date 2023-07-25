@@ -21,3 +21,11 @@
 - \- [مالکیت چیست | what is Ownership](/learn/programming_languages/rust/basics/ownership/)
 - \- [هدایتگر ها و قرض گرفتن  | References and Borrowing](/learn/programming_languages/rust/basics/ownership/)
 - \- [نوع تیکه | Slice type](/learn/programming_languages/rust/basics/ownership/)
+
+# سازه ها | Structs
+- \- [سازه ها | Structs]()
+- \- [روش های سازه | Structs Methods]()
+
+# تکی شمارنده ها | Enums
+- \- [تکی شمارنده ها | Enums]()
+- \- [مدیریت حرکت تکی شمارنده ها | Enums Control flow]()
