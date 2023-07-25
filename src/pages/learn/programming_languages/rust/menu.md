@@ -10,7 +10,7 @@
 
 
 # مفاهیم رایج برنامه نویسی
-- \- [متغیر ها  | variables](/learn/programming_languages/rust/basics/cpc/variables/)
+- \- [متغیر ها و تغیرپذیری  | Variables and Mutability](/learn/programming_languages/rust/basics/cpc/variables_mutability/)
 - \- [ تغیرپذیری | Mutability](/learn/programming_languages/rust/basics/cpc/mutability/)
 - \- [ثابت ها  | Constants](/learn/programming_languages/rust/basics/cpc/constants/)
 - \- [ پشت نوشته ها | Comments](/learn/programming_languages/rust/basics/cpc/comments/)
